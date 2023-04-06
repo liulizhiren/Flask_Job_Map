@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>技能图谱</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <script src="../static/assets/js/echarts.min.js"></script>
+    <!-- Favicons -->
+    <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/assets/css/bootstrap-table.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="../static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../static/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../static/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../static/plugins/summernote/summernote-bs4.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- =======================================================
+    * Template Name: Tempo - v2.1.0
+    * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="/index">Java开发工程师技能图谱</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo mr-auto"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li><a href="/index">首页</a></li>
+                <li><a href="/skill">岗位技能</a></li>
+                <li><a href="/map">岗位任务</a></li>
+                <li><a href="/analysis_job">技能分析</a></li>
+                <li class="active"><a href="/analysis_skill">技能图谱</a></li>
+                <li><a href="/wordcloud">技能词云</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+        {#      <h3>Welcome to <strong>Tempo</strong></h3>#}
+        {#      <h1>We're Creative Agency</h1>#}
+        {#      <h2>We are team of talanted designers making websites with Bootstrap</h2>#}
+        {#      <a href="#about" class="btn-get-started scrollto">Get Started</a>#}
+    </div>
+</section><!-- End Hero -->
+<style>
+    #hero {
+        width: 100%;
+        height: 10vh;
+        background: url("../static/assets/img/bg.jpg") top center;        background-size: cover;
+        position: relative;
+    }
+</style>
+<main id="main">
+    <!-- Main content -->
+    <section class="content">
+        <div class="section-title">
+
+            <h3>Java开发工程师的技能图谱</h3>
+        </div>
+
+                    <!-- Custom tabs (Charts with tabs)-->
+                     <div class="container-fluid">
+            <!-- Main row -->
+            <div class="row">
+                <!-- Left col -->
+                <section class="col-lg-7 connectedSortable">
+                    <!-- Custom tabs (Charts with tabs)-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-chart-pie mr-1"></i>
+                                Java开发工程师技能图谱1
+                            </h3>
+                            <div class="card-tools">
+                                <ul class="nav nav-pills ml-auto">
+                                    <li class="nav-item">
+
+                                    </li>
+                                    <li class="nav-item">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content p-0">
+                                <!-- Morris chart - Sales -->
+                                <div class="chart tab-pane active" id="relationChart"
+                                     style="position: relative;  height: 300px;">
+                                </div>
+                            </div>
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                    <!-- DIRECT CHAT -->
+                    <div class="card direct-chat direct-chat-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Java开发工程师技能图谱2</h3>
+
+                            <div class="card-tools">
+
+
+
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <!-- Conversations are loaded here -->
+
+
+                            <div id="relationChart1" style="height: 350px"></div>
+                            <!-- /.direct-chat-pane -->
+                        </div>
+                    </div>
+
+                    <!-- /.card -->
+                </section>
+
+                <!-- /.Left col -->
+                <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                <section class="col-lg-5 connectedSortable">
+
+                    <!-- Map card -->
+                    <div class="card bg-gradient-primary">
+                        <div class="card-header border-0">
+                            <h3 class="card-title">
+
+                                            Java开发工程师技能图谱3
+                            </h3>
+                            <!-- card tools -->
+                            <div class="card-tools">
+
+                            </div>
+                            <!-- /.card-tools -->
+                        </div>
+                        <div class="card-body" id="relationChart2" style="height: 400px;background-color: white">
+
+                        </div>
+                        <!-- /.card-body-->
+
+                    </div>
+                    <!-- /.card -->
+
+                    <!-- solid sales graph -->
+                    <div class="card bg-gradient-info">
+                        <div class="card-header border-0">
+                            <h3 class="card-title">
+                                Java开发工程师技能图谱4
+                            </h3>
+
+                            <div class="card-tools">
+
+                            </div>
+                        </div>
+
+                        <div id="relationChart4" style="height: 400px;background-color: white"></div>
+                    </div>
+                    <!-- /.card -->
+
+                </section>
+                <!-- right col -->
+            </div>
+            <!-- /.row (main row) -->
+        </div>
+
+
+
+    </section>
+
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+
+    <div class="container d-md-flex py-4">
+
+        <div class="mr-md-auto text-center text-md-left">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="static/assets/vendor/php-email-form/validate.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assets/vendor/venobox/venobox.min.js"></script>
+<script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="../static/assets/js/bootstrap-table.js"></script>
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+<!-- jQuery -->
+<script src="../static/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../static/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../static/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../static/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../static/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../static/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../static/plugins/moment/moment.min.js"></script>
+<script src="../static/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../static/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../static/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../static/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../static/dist/js/demo.js"></script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('relationChart'));
+
+    $(function() {
+
+
+				/*************** 关系图 **************/
+				//初始化echarts实例
+				const relationChart = echarts.init(document.getElementById("relationChart"));
+				const relationOpt = {
+				    animationDurationUpdate: 1500,
+				    animationEasingUpdate: 'quinticInOut',
+				    label: {
+				        normal: {
+				            show: true,
+				            textStyle: {
+				                fontSize: 12
+				            }
+				        }
+				    },
+				    series: [{
+			            type: 'graph',
+			            symbolSize: 50,
+			            focusNodeAdjacency: true,
+			            roam: true,
+			            layout: 'force',
+			            force: {
+			                repulsion: 400 //斥力因子，值越大，斥力越大
+			            },
+			            label: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 12
+			                    },
+			                }
+			            },
+			            edgeSymbolSize: [4, 50],
+			            edgeLabel: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 10
+			                    },
+			                    formatter: "{c}"
+			                }
+			            },
+			            categories: [{
+			            	name: '技能图谱',
+			            	itemStyle: {
+			            		normal: {
+			            			color: '#f2637b'
+			            		}
+			            	}
+			            }, {
+			                name: '数据库',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#eaa674",
+			                    }
+			                }
+			            }, {
+			                name: '开源框架',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }, {
+			                name: '#eaa674',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }],
+			            data: [{
+			            	name: '技能图谱',
+			            	category: 0,
+			            	draggable: true
+			            }, {
+			            	name: '数据库',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '消息中间件',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '开源框架',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			                name: 'Mysql',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Oracle',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Mongodb',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'redis',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Mybatis',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Springcloud',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Springboot',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Spring',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'RabbitMQ',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'RocketMQ',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '网络协议',
+			                category: 1,
+			                draggable: true,
+			            }, {
+			                name: 'HTTP',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'TCP',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'IP',
+			                category: 2,
+			                draggable: true,
+                        } , {
+			                name: 'WebSocket',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '开发语言',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Html',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Javascript',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'XML',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Json',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '开发工具',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Eclipse',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'plsql',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'Visual Studio',
+			                category: 2,
+			                draggable: true,
+
+
+                        }
+
+
+			            ],
+			            links: [{
+			            	source: 0,
+			                target: 1,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 2,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 3,
+			                value: ''
+			            }, {
+			                source: 1,
+			                target: 4,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 5,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 7,
+			                value: ''
+			            }, {
+			                source: 6,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 8,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 9,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 9,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 11,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 12,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 13,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 14,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 16,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 17,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 15,
+			                value: ''
+			            } , {
+			            	source: 14,
+			                target: 18,
+			                value: ''
+			            }  , {
+			            	source: 0,
+			                target: 19,
+			                value: ''
+			            }  , {
+
+			            	source: 20,
+			                target: 19,
+			                value: ''
+			            }   , {
+			            	source: 21,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 22,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 23,
+			                target: 19,
+			                value: ''
+			            } , {
+			            	source: 0,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 25,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 26,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 27,
+			                value: ''
+			            }
+
+			            ],
+			            lineStyle: {
+			                normal: {
+			                    opacity: 0.9,
+			                    width: 1,
+			                    curveness: 0
+			                }
+			            }
+				    }]
+				};
+				relationChart.setOption(relationOpt);
+
+
+			});
+		</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('relationChart1'));
+
+    $(function() {
+
+
+				/*************** 关系图 **************/
+				//初始化echarts实例
+				const relationChart = echarts.init(document.getElementById("relationChart1"));
+				const relationOpt = {
+				    animationDurationUpdate: 1500,
+				    animationEasingUpdate: 'quinticInOut',
+				    label: {
+				        normal: {
+				            show: true,
+				            textStyle: {
+				                fontSize: 12
+				            }
+				        }
+				    },
+				    series: [{
+			            type: 'graph',
+			            symbolSize: 50,
+			            focusNodeAdjacency: true,
+			            roam: true,
+			            layout: 'force',
+			            force: {
+			                repulsion: 400 //斥力因子，值越大，斥力越大
+			            },
+			            label: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 12
+			                    },
+			                }
+			            },
+			            edgeSymbolSize: [4, 50],
+			            edgeLabel: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 10
+			                    },
+			                    formatter: "{c}"
+			                }
+			            },
+			            categories: [{
+			            	name: '技能图谱',
+			            	itemStyle: {
+			            		normal: {
+			            			color: '#f2637b'
+			            		}
+			            	}
+			            }, {
+			                name: '数据库',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#eaa674",
+			                    }
+			                }
+			            }, {
+			                name: '开源框架',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }, {
+			                name: '#eaa674',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }],
+			            data: [{
+			            	name: '技能图谱',
+			            	category: 0,
+			            	draggable: true
+			            }, {
+			            	name: '开源服务器',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '常用工程工具1',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '计算机基础知识',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			                name: 'Tomcat',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Apache',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Nginx',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Mqtt',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '数据结构',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '操作系统',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '内存管理',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Svn',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Jenkins',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Maven',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '常用工程工具2',
+			                category: 1,
+			                draggable: true,
+			            }, {
+			                name: 'Npm',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'Ant',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'Git',
+			                category: 2,
+			                draggable: true,
+                        } , {
+			                name: 'WebSocket',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '前端技术',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Html',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Javascript',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'CSS',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'jQuery',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '开源组件',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Hadoop',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Kafka',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'Cassandra',
+			                category: 2,
+			                draggable: true,
+
+
+                        }
+
+
+			            ],
+			            links: [{
+			            	source: 0,
+			                target: 1,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 2,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 3,
+			                value: ''
+			            }, {
+			                source: 1,
+			                target: 4,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 5,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 7,
+			                value: ''
+			            }, {
+			                source: 6,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 8,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 9,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 9,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 11,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 12,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 13,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 14,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 16,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 17,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 15,
+			                value: ''
+			            } , {
+			            	source: 14,
+			                target: 18,
+			                value: ''
+			            }  , {
+			            	source: 0,
+			                target: 19,
+			                value: ''
+			            }  , {
+
+			            	source: 20,
+			                target: 19,
+			                value: ''
+			            }   , {
+			            	source: 21,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 22,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 23,
+			                target: 19,
+			                value: ''
+			            } , {
+			            	source: 0,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 25,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 26,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 27,
+			                value: ''
+			            }
+
+			            ],
+			            lineStyle: {
+			                normal: {
+			                    opacity: 0.9,
+			                    width: 1,
+			                    curveness: 0
+			                }
+			            }
+				    }]
+				};
+				relationChart.setOption(relationOpt);
+
+
+			});
+		</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('relationChart2'));
+
+    $(function() {
+
+
+				/*************** 关系图 **************/
+				//初始化echarts实例
+				const relationChart = echarts.init(document.getElementById("relationChart2"));
+				const relationOpt = {
+				    animationDurationUpdate: 1500,
+				    animationEasingUpdate: 'quinticInOut',
+				    label: {
+				        normal: {
+				            show: true,
+				            textStyle: {
+				                fontSize: 12
+				            }
+				        }
+				    },
+				    series: [{
+			            type: 'graph',
+			            symbolSize: 50,
+			            focusNodeAdjacency: true,
+			            roam: true,
+			            layout: 'force',
+			            force: {
+			                repulsion: 400 //斥力因子，值越大，斥力越大
+			            },
+			            label: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 12
+			                    },
+			                }
+			            },
+			            edgeSymbolSize: [4, 50],
+			            edgeLabel: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 10
+			                    },
+			                    formatter: "{c}"
+			                }
+			            },
+			            categories: [{
+			            	name: '技能图谱',
+			            	itemStyle: {
+			            		normal: {
+			            			color: '#f2637b'
+			            		}
+			            	}
+			            }, {
+			                name: '数据库',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#eaa674",
+			                    }
+			                }
+			            }, {
+			                name: '操作系统',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }, {
+			                name: '#eaa674',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }],
+			            data: [{
+			            	name: '技能图谱',
+			            	category: 0,
+			            	draggable: true
+			            }, {
+			            	name: '云计算相关技术',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '开源技术',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '操作系统',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			                name: 'Devops',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Docker',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Kubernetes',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '虚拟化技术',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Linux',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Unix',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Android',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Webpack',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Glup',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Rollup',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '开发部署工具',
+			                category: 1,
+			                draggable: true,
+			            }, {
+			                name: 'Eclipse',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'MyEclipse',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'jboss',
+			                category: 2,
+			                draggable: true,
+                        } , {
+			                name: 'ant',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Web技术',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Servlet',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Javascript',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'Angular',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'jQuery',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '相关技术',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: 'Hadoop',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Kafka',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'Cassandra',
+			                category: 2,
+			                draggable: true,
+
+
+                        }
+
+
+			            ],
+			            links: [{
+			            	source: 0,
+			                target: 1,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 2,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 3,
+			                value: ''
+			            }, {
+			                source: 1,
+			                target: 4,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 5,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 7,
+			                value: ''
+			            }, {
+			                source: 6,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 8,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 9,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 9,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 11,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 12,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 13,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 14,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 16,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 17,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 15,
+			                value: ''
+			            } , {
+			            	source: 14,
+			                target: 18,
+			                value: ''
+			            }  , {
+			            	source: 0,
+			                target: 19,
+			                value: ''
+			            }  , {
+
+			            	source: 20,
+			                target: 19,
+			                value: ''
+			            }   , {
+			            	source: 21,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 22,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 23,
+			                target: 19,
+			                value: ''
+			            } , {
+			            	source: 0,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 25,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 26,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 27,
+			                value: ''
+			            }
+
+			            ],
+			            lineStyle: {
+			                normal: {
+			                    opacity: 0.9,
+			                    width: 1,
+			                    curveness: 0
+			                }
+			            }
+				    }]
+				};
+				relationChart.setOption(relationOpt);
+
+
+			});
+		</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('relationChart4'));
+
+    $(function() {
+
+
+				/*************** 关系图 **************/
+				//初始化echarts实例
+				const relationChart = echarts.init(document.getElementById("relationChart4"));
+				const relationOpt = {
+				    animationDurationUpdate: 1500,
+				    animationEasingUpdate: 'quinticInOut',
+				    label: {
+				        normal: {
+				            show: true,
+				            textStyle: {
+				                fontSize: 12
+				            }
+				        }
+				    },
+				    series: [{
+			            type: 'graph',
+			            symbolSize: 50,
+			            focusNodeAdjacency: true,
+			            roam: true,
+			            layout: 'force',
+			            force: {
+			                repulsion: 400 //斥力因子，值越大，斥力越大
+			            },
+			            label: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 12
+			                    },
+			                }
+			            },
+			            edgeSymbolSize: [4, 50],
+			            edgeLabel: {
+			                normal: {
+			                    show: true,
+			                    textStyle: {
+			                        fontSize: 10
+			                    },
+			                    formatter: "{c}"
+			                }
+			            },
+			            categories: [{
+			            	name: '技能图谱',
+			            	itemStyle: {
+			            		normal: {
+			            			color: '#f2637b'
+			            		}
+			            	}
+			            }, {
+			                name: '数据库',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#eaa674",
+			                    }
+			                }
+			            }, {
+			                name: '开源框架',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }, {
+			                name: '#eaa674',
+			                itemStyle: {
+			                    normal: {
+			                        color: "#4ecb73",
+			                    }
+			                }
+			            }],
+			            data: [{
+			            	name: '技能图谱',
+			            	category: 0,
+			            	draggable: true
+			            }, {
+			            	name: '相关技术1',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '各种常用技术2',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			            	name: '各种常用框架和技术',
+			            	category: 1,
+			            	draggable: true
+			            }, {
+			                name: 'Java基础',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'JavaEE',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '缓存',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'redis',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '消息队列',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Netty',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'IOC',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: 'Shell',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '集群与负载均衡',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '分库分表',
+			                category: 2,
+			                draggable: true,
+			            }, {
+			                name: '基础框架',
+			                category: 1,
+			                draggable: true,
+			            }, {
+			                name: 'IO',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: '多线程',
+			                category: 2,
+			                draggable: true,
+                        }, {
+			                name: 'IP',
+			                category: 2,
+			                draggable: true,
+                        } , {
+			                name: '集合',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '相关技术2',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: '索引',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '分布式架构',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: 'Jvm',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: 'Dubbo',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '各种常用技术1',
+			                category: 1,
+			                draggable: true,
+                        }  , {
+			                name: '分布式存储',
+			                category: 2,
+			                draggable: true,
+                        }  , {
+			                name: '搜索',
+			                category: 2,
+			                draggable: true,
+                        }   , {
+			                name: '异步框架',
+			                category: 2,
+			                draggable: true,
+
+
+                        }
+
+
+			            ],
+			            links: [{
+			            	source: 0,
+			                target: 1,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 2,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 3,
+			                value: ''
+			            }, {
+			                source: 1,
+			                target: 4,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 5,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 1,
+			                target: 7,
+			                value: ''
+			            }, {
+			                source: 6,
+			                target: 6,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 8,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 9,
+			                value: ''
+			            }, {
+			            	source: 3,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 9,
+			                target: 10,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 11,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 12,
+			                value: ''
+			            }, {
+			            	source: 2,
+			                target: 13,
+			                value: ''
+			            }, {
+			            	source: 0,
+			                target: 14,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 16,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 17,
+			                value: ''
+			            }, {
+			            	source: 14,
+			                target: 15,
+			                value: ''
+			            } , {
+			            	source: 14,
+			                target: 18,
+			                value: ''
+			            }  , {
+			            	source: 0,
+			                target: 19,
+			                value: ''
+			            }  , {
+
+			            	source: 20,
+			                target: 19,
+			                value: ''
+			            }   , {
+			            	source: 21,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 22,
+			                target: 19,
+			                value: ''
+			            }  , {
+			            	source: 23,
+			                target: 19,
+			                value: ''
+			            } , {
+			            	source: 0,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 25,
+			                target: 24,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 26,
+			                value: ''
+			            }, {
+			            	source: 24,
+			                target: 27,
+			                value: ''
+			            }
+
+			            ],
+			            lineStyle: {
+			                normal: {
+			                    opacity: 0.9,
+			                    width: 1,
+			                    curveness: 0
+			                }
+			            }
+				    }]
+				};
+				relationChart.setOption(relationOpt);
+
+
+			});
+		</script>
+
+</body>
+
+</html>
